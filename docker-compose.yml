@@ -1,0 +1,29 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  web:
+    image: peter-app-image
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+    # environment:
+    #   MYSQL_HOST: db
+    #   MYSQL_USER: exampleuser
+    #   MYSQL_PASSWORD: examplepass
+    #   MYSQL_DB: exampledb
+
+  # db:
+  #   image: mysql:5.7
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: rootpassword
+  #     MYSQL_DATABASE: exampledb
+  #     MYSQL_USER: exampleuser
+  #     MYSQL_PASSWORD: examplepass
+  #   volumes:
+  #     - dbdata:/var/lib/mysql
+
+# volumes:
+#   dbdata:
